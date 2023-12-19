@@ -14,7 +14,6 @@ void ui_mainScreen_screen_init(void);
 lv_obj_t * ui_mainScreen;
 void ui_event_Label4(lv_event_t * e);
 lv_obj_t * ui_Label4;
-lv_obj_t * ui_status_label;
 void ui_event_wifiIcon(lv_event_t * e);
 lv_obj_t * ui_wifiIcon;
 void ui_event_noWifiIcon(lv_event_t * e);
@@ -26,6 +25,41 @@ lv_obj_t * ui_timeLabel;
 lv_obj_t * ui_sdLogo;
 void ui_event_mergeSwitch(lv_event_t * e);
 lv_obj_t * ui_mergeSwitch;
+void ui_event_memBtn(lv_event_t * e);
+lv_obj_t * ui_memBtn;
+lv_obj_t * ui_memBtnLabel;
+lv_obj_t * ui_MemPanel;
+lv_obj_t * ui_testbtn;
+lv_obj_t * ui_econButtonlabel3;
+lv_obj_t * ui_Container1;
+lv_obj_t * ui_chipType;
+lv_obj_t * ui_chipTypeLabel;
+lv_obj_t * ui_epcSize;
+lv_obj_t * ui_epcSizeLabel1;
+lv_obj_t * ui_epcSizeLabel2;
+lv_obj_t * ui_totalMem;
+lv_obj_t * ui_totatMemoryLabel1;
+lv_obj_t * ui_totatMemoryLabel2;
+lv_obj_t * ui_tidSize;
+lv_obj_t * ui_TIDsizeLabel1;
+lv_obj_t * ui_TIDsizeLabel2;
+lv_obj_t * ui_PWDsize;
+lv_obj_t * ui_Usersize;
+lv_obj_t * ui_userSizeLabel1;
+lv_obj_t * ui_userSizeLabel2;
+lv_obj_t * ui_PWDsizeLabel3;
+lv_obj_t * ui_PWDsizeLabel4;
+void ui_event_panelClose(lv_event_t * e);
+lv_obj_t * ui_panelClose;
+lv_obj_t * ui_econButtonlabel1;
+lv_obj_t * ui_testbtn1;
+lv_obj_t * ui_econButtonlabel4;
+lv_obj_t * ui_testbtn2;
+lv_obj_t * ui_econButtonlabel5;
+lv_obj_t * ui_testbtn3;
+lv_obj_t * ui_econButtonlabel6;
+lv_obj_t * ui_testbtn4;
+lv_obj_t * ui_econButtonlabel7;
 
 
 // SCREEN: ui_setupScreen
@@ -192,6 +226,22 @@ void ui_event_mergeSwitch(lv_event_t * e)
     lv_obj_t * target = lv_event_get_target(e);
     if(event_code == LV_EVENT_CLICKED) {
         merge_switch_click(e);
+    }
+}
+void ui_event_memBtn(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_flag_modify(ui_MemPanel, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_REMOVE);
+    }
+}
+void ui_event_panelClose(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_CLICKED) {
+        _ui_flag_modify(ui_MemPanel, LV_OBJ_FLAG_HIDDEN, _UI_MODIFY_FLAG_ADD);
     }
 }
 void ui_event_mainTab(lv_event_t * e)

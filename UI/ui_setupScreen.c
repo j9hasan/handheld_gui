@@ -19,7 +19,12 @@ void ui_setupScreen_screen_init(void)
     lv_obj_clear_flag(ui_mainTab, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE |
                       LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM |
                       LV_OBJ_FLAG_SCROLL_CHAIN);     /// Flags
+    lv_obj_set_style_bg_color(ui_mainTab, lv_color_hex(0xB2E1FB), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui_mainTab, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    lv_obj_set_style_bg_color(lv_tabview_get_tab_btns(ui_mainTab), lv_color_hex(0xB2E1FB),
+                              LV_PART_ITEMS | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(lv_tabview_get_tab_btns(ui_mainTab), 255,  LV_PART_ITEMS | LV_STATE_DEFAULT);
 
     ui_TabPage1WiFi = lv_tabview_add_tab(ui_mainTab, "WiFi");
     lv_obj_clear_flag(ui_TabPage1WiFi, LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_SNAPPABLE |
@@ -71,6 +76,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_connectButton, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_connectButton, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_connectButton, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_connectButton, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_connectButtonlabel = lv_label_create(ui_connectButton);
     lv_obj_set_width(ui_connectButtonlabel, LV_SIZE_CONTENT);   /// 1
@@ -86,6 +92,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_scanButton, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_scanButton, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_scanButton, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_scanButton, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_scanButtonlabel = lv_label_create(ui_scanButton);
     lv_obj_set_width(ui_scanButtonlabel, LV_SIZE_CONTENT);   /// 1
@@ -101,6 +108,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_econButton, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_econButton, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_econButton, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_econButton, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_econButtonlabel = lv_label_create(ui_econButton);
     lv_obj_set_width(ui_econButtonlabel, LV_SIZE_CONTENT);   /// 1
@@ -166,6 +174,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_BtSave, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_BtSave, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_BtSave, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_BtSave, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_label20 = lv_label_create(ui_BtSave);
     lv_obj_set_width(ui_label20, LV_SIZE_CONTENT);   /// 1
@@ -183,6 +192,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_BtStop, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_BtStop, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_BtStop, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_BtStop, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_label1 = lv_label_create(ui_BtStop);
     lv_obj_set_width(ui_label1, LV_SIZE_CONTENT);   /// 1
@@ -200,6 +210,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_BtStart, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_BtStart, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_BtStart, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_BtStart, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_label2 = lv_label_create(ui_BtStart);
     lv_obj_set_width(ui_label2, LV_SIZE_CONTENT);   /// 1
@@ -374,6 +385,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_writeButton, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_writeButton, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_writeButton, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_writeButton, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_writeButtonlabel = lv_label_create(ui_writeButton);
     lv_obj_set_width(ui_writeButtonlabel, LV_SIZE_CONTENT);   /// 1
@@ -566,6 +578,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_align(ui_writeButtonSetupTab, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_writeButtonSetupTab, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_writeButtonSetupTab, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_writeButtonSetupTab, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_writeButtonlabel1 = lv_label_create(ui_writeButtonSetupTab);
     lv_obj_set_width(ui_writeButtonlabel1, LV_SIZE_CONTENT);   /// 1
@@ -589,13 +602,14 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_style_shadow_ofs_y(ui_notifyPanel, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_notifyPanelclosebutton = lv_btn_create(ui_notifyPanel);
-    lv_obj_set_width(ui_notifyPanelclosebutton, lv_pct(30));
+    lv_obj_set_width(ui_notifyPanelclosebutton, lv_pct(23));
     lv_obj_set_height(ui_notifyPanelclosebutton, lv_pct(25));
-    lv_obj_set_x(ui_notifyPanelclosebutton, -62);
-    lv_obj_set_y(ui_notifyPanelclosebutton, -39);
+    lv_obj_set_x(ui_notifyPanelclosebutton, 71);
+    lv_obj_set_y(ui_notifyPanelclosebutton, -40);
     lv_obj_set_align(ui_notifyPanelclosebutton, LV_ALIGN_CENTER);
     lv_obj_add_flag(ui_notifyPanelclosebutton, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_clear_flag(ui_notifyPanelclosebutton, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_notifyPanelclosebutton, 15, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_notifyPanelclosebuttonlabel = lv_label_create(ui_notifyPanelclosebutton);
     lv_obj_set_width(ui_notifyPanelclosebuttonlabel, LV_SIZE_CONTENT);   /// 1
@@ -604,6 +618,7 @@ void ui_setupScreen_screen_init(void)
     lv_obj_set_y(ui_notifyPanelclosebuttonlabel, lv_pct(0));
     lv_obj_set_align(ui_notifyPanelclosebuttonlabel, LV_ALIGN_CENTER);
     lv_label_set_text(ui_notifyPanelclosebuttonlabel, "close");
+    lv_obj_set_style_text_font(ui_notifyPanelclosebuttonlabel, &lv_font_montserrat_10, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_notifyPanellabel = lv_label_create(ui_notifyPanel);
     lv_obj_set_width(ui_notifyPanellabel, LV_SIZE_CONTENT);   /// 1
