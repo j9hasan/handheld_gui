@@ -90,3 +90,7 @@ def merge_switch_click(event_struct):
 def beepon_clicked(event_struct):
     return
 
+
+def mem_btn_clicked(event_struct):
+    return
+
