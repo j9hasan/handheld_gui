@@ -104,3 +104,13 @@ void write_setup(lv_event_t * e)
 {
 	// Your code here
 }
+
+void merge_switch_click(lv_event_t * e)
+{
+	// Your code here
+}
+
+void beepon_clicked(lv_event_t * e)
+{
+	// Your code here
+}

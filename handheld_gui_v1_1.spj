@@ -4560,7 +4560,7 @@
                           },
                           {
                             "nid": -40515765,
-                            "strtype": "_custom/action",
+                            "strtype": "_event/action",
                             "strval": "KEYBOARD SET TARGET",
                             "childs": [
                               {
@@ -25065,8 +25065,7 @@
                     "InheritedType": 4
                   }
                 ],
-                "saved_objtypeKey": "TABPAGE",
-                "tree_closed": true
+                "saved_objtypeKey": "TABPAGE"
               }
             ],
             "locked": false,
@@ -27396,7 +27395,7 @@
               {
                 "nid": -414860419,
                 "strtype": "OBJECT/Name",
-                "strval": "tabSetupNotifyLabel",
+                "strval": "tabNotifyLabel",
                 "InheritedType": 10
               },
               {
@@ -27915,16 +27914,16 @@
     "board_version": "v1.1.0",
     "editor_version": "1.3.4",
     "image": "",
-    "force_export_images": false,
+    "force_export_images": true,
     "flat_export": true,
     "pointfilter": false,
     "theme_simplified": false,
     "theme_dark": false,
     "theme_color1": 5,
     "theme_color2": 0,
-    "uiExportFolderPath": "C:\\Users\\LENOVO\\Documents\\PlatformIO\\Projects\\UI_new",
-    "projectExportFolderPath": "C:\\Users\\LENOVO\\Documents\\PlatformIO\\Projects\\UI_new",
-    "backup_cnt": 419,
+    "uiExportFolderPath": "C:\\Users\\LENOVO\\Documents\\JENCE-JUBAID\\LVGL_GUI\\handheld_GUI\\UI",
+    "projectExportFolderPath": "C:\\Users\\LENOVO\\Documents\\JENCE-JUBAID\\LVGL_GUI\\handheld_GUI",
+    "backup_cnt": 425,
     "autosave_cnt": 0,
     "lvgl_version": "8.3.6",
     "callfuncsexport": "CPP_FILE",
